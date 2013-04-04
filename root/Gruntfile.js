@@ -32,6 +32,20 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
+    jasmin_node: {
+      specNameMatcher: ".spec", // load only specs containing specNameMatcher
+      projectRoot: "test/",
+      requirejs: false,
+      forceExit: true,
+      matchall: false,
+      extensions: 'js',
+      jUnit: {
+        report: false,
+        savePath : "./build/reports/jasmine/",
+        useDotNotation: true,
+        consolidate: true
+      }
+    },
     watch: {
       default: {
         files: ['src/**/*.coffee'],
@@ -43,22 +57,22 @@ module.exports = function(grunt) {
       },
       lib: {
         files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
+        tasks: ['coffee', 'jshint:lib']
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'nodeunit']
+        tasks: ['coffee', 'jshint:test']
       },
     },
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-jasmine-node');
 
   // Default task.
-  grunt.registerTask('default', ['coffee', 'jshint']);
+  grunt.registerTask('default', ['coffee', 'jasmin_node', 'jshint']);
 
 };

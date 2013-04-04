@@ -55,7 +55,9 @@ exports.template = function(grunt, init, done) {
       'grunt': '~0.4.0',
       'grunt-contrib': '0.4.x',
       'grunt-contrib-coffee': '0.4.x',
-      'grunt-contrib-clean': '0.4.x'
+      'grunt-contrib-clean': '0.4.x',
+      'grunt-jasmine-node': '~0.0.6',
+      'should': '~1.2.2'
     };
 
     // Files to copy (and process).

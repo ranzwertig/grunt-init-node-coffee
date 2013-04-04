@@ -1,8 +1,6 @@
-A grunt init template creating a node coffee project with coffee script.
-=======
 # grunt-init-node-coffee
 
-> Create a Node.js module with [grunt-init][], including Nodeunit unit tests.
+> Create a Node.js module with [grunt-init][], including Coffeescript.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
@@ -26,4 +24,3 @@ grunt-init node
 ```
 
 _Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
->>>>>>> c3afae3c6aed873eacdfef6dd6103379891192e9
