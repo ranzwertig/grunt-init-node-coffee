@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
-    jasmin_node: {
+    jasmine_node: {
       specNameMatcher: ".spec", // load only specs containing specNameMatcher
       projectRoot: "test/",
       requirejs: false,
@@ -73,6 +73,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jasmine-node');
 
   // Default task.
-  grunt.registerTask('default', ['coffee', 'jasmin_node', 'jshint']);
+  grunt.registerTask('default', ['coffee', 'jasmine_node', 'jshint']);
 
 };
