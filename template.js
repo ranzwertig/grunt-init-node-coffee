@@ -56,7 +56,7 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib': '0.4.x',
       'grunt-contrib-coffee': '0.4.x',
       'grunt-contrib-clean': '0.4.x',
-      'grunt-jasmine-node': '~0.0.6',
+      'grunt-jasmine-node': 'https://github.com/ranzwertig/grunt-jasmine-node/tarball/master',
       'should': '~1.2.2'
     };
 
