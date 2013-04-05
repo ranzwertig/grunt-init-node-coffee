@@ -27,9 +27,6 @@ module.exports = function(grunt) {
       },
       bin: {
         src: ['bin/**/*.js']
-      },
-      test: {
-        src: ['test/**/*.js']
       }
     },
     jasmine_node: {
